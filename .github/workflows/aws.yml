@@ -57,7 +57,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: service
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: "latest"
       run: |
         # Build a docker container and
         # push it to ECR so that it can
@@ -72,7 +72,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: envoy
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: "latest"
       run: |
         # Build a docker container and
         # push it to ECR so that it can
@@ -87,7 +87,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: front-envoy
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: "latest"
       run: |
         # Build a docker container and
         # push it to ECR so that it can
